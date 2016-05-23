@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BCM-EM-cOr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="YIM-Sl-abW">
+            <objects>
+                <navigationController id="BCM-EM-cOr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ERv-6Y-vDx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pID-Tb-i3e" kind="relationship" relationship="rootViewController" id="pBY-dB-23f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9W-aB-Y7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="424"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="9dQ-6w-I1X">
+            <objects>
+                <viewController id="pID-Tb-i3e" customClass="MainViewController" customModule="eVisit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0UO-2a-vS6"/>
+                        <viewControllerLayoutGuide type="bottom" id="FuP-FQ-bFj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vSg-Uj-ga6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-RT-6gd">
+                                <rect key="frame" x="240" y="275" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="YCf-b0-cLr"/>
+                                    <constraint firstAttribute="height" constant="50" id="ort-0c-9ys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Launch Ionic"/>
+                                <connections>
+                                    <action selector="launchBtnPressed:" destination="pID-Tb-i3e" eventType="touchUpInside" id="bLk-1a-RWe"/>
+                                    <segue destination="4Lf-hl-g8F" kind="presentation" id="bsq-e0-Qjp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i1H-RT-6gd" firstAttribute="centerX" secondItem="vSg-Uj-ga6" secondAttribute="centerX" id="Syl-HS-ZfX"/>
+                            <constraint firstItem="i1H-RT-6gd" firstAttribute="centerY" secondItem="vSg-Uj-ga6" secondAttribute="centerY" id="yWb-Lw-5nD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sdf-bi-iuI"/>
+                    <connections>
+                        <outlet property="launchBtn" destination="i1H-RT-6gd" id="DzS-eq-MxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJ7-Ux-Hta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="424"/>
+        </scene>
+        <!--Cordova View Controller-->
+        <scene sceneID="qQM-3p-yXv">
+            <objects>
+                <viewController id="4Lf-hl-g8F" customClass="CordovaViewController" customModule="eVisit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Hg-zC-MXM"/>
+                        <viewControllerLayoutGuide type="bottom" id="UNp-ih-C9m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hJ1-y7-0Re">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFt-cn-qM4">
+                                <rect key="frame" x="234" y="528" width="132" height="30"/>
+                                <state key="normal" title="Close the Ionic app">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeBtnPressed:" destination="4Lf-hl-g8F" eventType="touchUpInside" id="qk5-xu-Tsa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UNp-ih-C9m" firstAttribute="top" secondItem="HFt-cn-qM4" secondAttribute="bottom" constant="42" id="20Z-TO-Org"/>
+                            <constraint firstItem="HFt-cn-qM4" firstAttribute="centerX" secondItem="hJ1-y7-0Re" secondAttribute="centerX" id="hrI-2G-vbF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWh-EG-ccj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="424"/>
+        </scene>
+    </scenes>
+</document>
